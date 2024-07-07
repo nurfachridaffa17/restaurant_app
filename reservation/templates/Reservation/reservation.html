@@ -30,7 +30,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-10 p-5 form-wrap">
-          <form action="" method="post">
+          <form action="" method="post" id="reservationForm">
             {% csrf_token %}
             <div class="row mb-4">
               <div class="form-group col-md-4">
@@ -83,12 +83,6 @@
               </div>
             </div>
           </form>
-
-          <!-- <form action="" method="post"> -->
-            <!-- {% csrf_token %} -->
-            <!-- {{form}}
-            <button type="submit" class="btn btn-primary">Submit</button> -->
-          <!-- </form> -->
         </div>
       </div>
     </div>
@@ -112,8 +106,8 @@
               <blockquote class="testimonial">
                 <p>&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quaerat recusandae molestias incidunt sapiente sit numquam delectus mollitia! Non laudantium impedit voluptas consequatur corrupti. Cumque consequuntur nemo eos et error!&rdquo;</p>
                 <div class="author">
-                  <img src="img/person_1.jpg" alt="Image placeholder" class="mb-3">
-                  <h4>Maxim Smith</h4>
+                  <img src="{% static 'site_static/img/person_1.jpg' %}" alt="Image placeholder" class="mb-3">
+                  <h4>Nurfachri DA</h4>
                   <p>CEO, Founder</p>
                 </div>
               </blockquote>
@@ -122,8 +116,8 @@
               <blockquote class="testimonial">
                 <p>&ldquo;Sint adipisci laborum dolorum ipsa quidem alias ipsum aperiam aut! Quis rerum soluta dolorem iure nihil velit error sequi? Dignissimos accusantium adipisci unde officia? Dolores aut sequi dolorum repellendus quod.&rdquo;</p>
                 <div class="author">
-                  <img src="img/person_2.jpg" alt="Image placeholder" class="mb-3">
-                  <h4>Geert Green</h4>
+                  <img src="{% static 'site_static/img/person_2.jpg' %}" alt="Image placeholder" class="mb-3">
+                  <h4>Aqsa Idris</h4>
                   <p>CEO, Founder</p>
                 </div>
               </blockquote>
@@ -132,8 +126,8 @@
               <blockquote class="testimonial">
                 <p>&ldquo;Ratione alias iure ab facere quia aliquam dolor et voluptates esse nihil corporis distinctio hic ea quo ducimus autem cum amet. Quos accusamus iusto porro nulla temporibus numquam commodi soluta.&rdquo;</p>
                 <div class="author">
-                  <img src="img/person_3.jpg" alt="Image placeholder" class="mb-3">
-                  <h4>Dennis Roman</h4>
+                  <img src="{% static 'site_static/img/person_3.jpg' %}" alt="Image placeholder" class="mb-3">
+                  <h4>Muhamad Rizky</h4>
                   <p>CEO, Founder</p>
                 </div>
               </blockquote>
@@ -142,8 +136,8 @@
               <blockquote class="testimonial">
                 <p>&ldquo;Ad quod aspernatur ipsa. Numquam expedita delectus qui ad explicabo voluptas eos vel reiciendis magnam rerum quaerat quisquam accusantium quae saepe ipsam ullam ut ea molestiae porro. Recusandae veniam maxime.&rdquo;</p>
                 <div class="author">
-                  <img src="img/person_2.jpg" alt="Image placeholder" class="mb-3">
-                  <h4>Geert Green</h4>
+                  <img src="{% static 'site_static/img/person_1.jpg' %}" alt="Image placeholder" class="mb-3">
+                  <h4>Daffa Alhakim</h4>
                   <p>CEO, Founder</p>
                 </div>
               </blockquote>

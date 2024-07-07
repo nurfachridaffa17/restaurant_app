@@ -11,5 +11,8 @@ def reserve_table(request):
         form = ReserveTableForm(request.POST)
         if form.is_valid():
             form.save()
+    else :
+        form = ReserveTableForm()
+
     context = {'form' : form}
     return render(request, 'Reservation/reservation.html', context)
