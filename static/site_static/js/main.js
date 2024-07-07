@@ -250,10 +250,19 @@ AOS.init({
   });
 
   $('#date').datepicker({
-    'format': 'm/d/yyyy',
-    'autoclose': true
+    format: 'yyyy-mm-dd',  // Desired format
+    autoclose: true        // Close the picker automatically after selecting a date
   });
-  $('#time').timepicker();
+
+  // Initialize Timepicker
+  $('#time').timepicker({
+    timeFormat: 'H:mm:ss',  // Desired format
+    interval: 1,            // Interval in minutes for the time picker dropdown
+    startTime: '00:00',     // Start time for the time picker dropdown
+    dynamic: false,         // Whether to dynamically update the dropdown as the user types
+    dropdown: true,         // Whether to show the timepicker dropdown
+    scrollbar: true         // Whether to show a scrollbar if the dropdown content overflows
+  });
 
 
   //------- Google Map  js --------//  

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title %}Blog{% endblock %}
+{% load static %}
+{% block body %}
+      
+      <div class="main-wrap">
+        <div class="cover_1 cover_sm">
+          <div class="img_bg" style="background-image: url({% static 'site_static/img/slider-1.jpg' %})" data-stellar-background-ratio="0.5">
+            <div class="container">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-7" data-aos="fade-up">
+                  <h2 class="heading">Blog Grid</h2>
+                  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo saepe dolorum dolorem, iste officia voluptates! Sint repudiandae, soluta voluptatem delectus iure, eaque, harum expedita, nisi aliquam magni odio perferendis ipsum!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- .cover_1 -->
+
+       <div class="section">
+          <div class="container">
+            
+            <div class="row mb-5">
+              {% for post in post_list %}
+              <div class="col-md-4">
+                <div class="media d-block media-bg-white mb-5" data-aos="fade-up"  data-aos-delay="400">
+                  <figure>
+                    <a href="blog-single.html"><img src="{{ post.image.url }}" alt="Image placeholder" class="img-fluid"></a>
+                  </figure>
+                  <div class="media-body">
+                    <h3><a href="{% url 'blog:post_detail' post.id %}">{{ post.title }}</a></h3>
+                    <p class="post-meta"><span><span class="fa fa-calendar"></span> {{ post.created }}</span></p>
+                    <p class="mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, non animi voluptas repellat perferendis autem laborum molestias illum sit, natus dolores illo voluptate sunt nulla quibusdam, reiciendis voluptatibus. Quo, dolore?</p>
+                    <p><a href="{% url 'blog:post_detail' post.id %}" class="btn btn-primary btn-outline-primary btn-sm">Read More</a></p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="pagination custom-pagination">
+                  {% for num in post_list.paginator.page_range %}
+                    <li class="page-item {% if num == post_list.number %}active{% endif %}">
+                      <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
+                <!-- <div class="pagination">
+                  <span class="step-links">
+                    {% if post_list.has_previous %}
+                      <a href="?page=1">&laquo; first</a>
+                      <a href="?page={{ post_list.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                      Page {{ post_list.number }} of {{ post_list.paginator.num_pages }}
+                    </span>
+
+                    {% if post_list.has_next %}
+                      <a href="?page={{ post_list.next_page_number }}">next</a>
+                      <a href="?page={{ post_list.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                  </span>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div> <!-- .section -->
+      
+
+
+      </div> <!-- .main-wrap -->
+      
+
+{% endblock body %}
