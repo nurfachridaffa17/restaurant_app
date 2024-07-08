@@ -3,7 +3,6 @@ Django
 
 # Database adapter
 psycopg2-binary
-mysqlclient
 
 # Pillow for image processing
 Pillow
