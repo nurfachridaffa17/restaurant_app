@@ -3,8 +3,6 @@
 This project is for assignment of smart web from group 3 to get a good value
 
 
-
-
 ## Deployment
 
 To deploy this project run
@@ -15,7 +13,7 @@ To deploy this project run
 
 After the you run
 ```bash
-  python3 manage.py makemigrations
+  python3 manage.py migrate
 ```
 
 
