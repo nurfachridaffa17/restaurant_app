@@ -34,12 +34,13 @@
       <nav class="site-menu">
         <div class="site-menu-inner">
           <ul class="list-unstyled">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li class="active"><a href="{% url 'home:home' %}">Home</a></li>
             <li><a href="{% url 'aboutus:aboutus_list' %}">About Us</a></li>
             <li><a href="{% url 'meals:meal_list' %}">Our Menu</a></li>
             <li><a href="{% url 'blog:potst_list' %}">Our Blog</a></li>
             <li><a href="{% url 'reservation:reserve_table' %}">Reserve A Table</a></li>
             <li><a href="{% url 'contact:send_email' %}">Contact</a></li>
+            <li><a href="{% url 'admin:index' %}">Admin</a></li>
           </ul>
         </div>
       </nav>
