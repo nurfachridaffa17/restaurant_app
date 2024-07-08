@@ -32,6 +32,7 @@ SECRET_KEY = 'django-insecure-&6lbyg)e=z*-olav7=i4*73@a-*cojc*j+99evq08wy=b8%1&l
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://pesantap.my.id','https://.127.0.0.1']
 
 
 # Application definition
