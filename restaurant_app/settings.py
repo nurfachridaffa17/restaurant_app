@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'aboutus',
     'contact',
     'home',
-    'authentication',
+    'accounts',
 ]
 
 MIDDLEWARE = [

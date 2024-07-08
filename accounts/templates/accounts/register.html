@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block title %}Register{% endblock %}
+{% load static %}
+{% block body %}
+
+    <div class="main-wrap">
+        <div class="cover_1 cover_sm">
+        <div class="img_bg" style="background-image: url({% static 'site_static/img/slider-1.jpg' %})" data-stellar-background-ratio="0.5">
+            <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-7" data-aos="fade-up">
+                <h2 class="heading">Register</h2>
+                <p class="lead">Welcome</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div> <!-- .cover_1 -->
+
+    <div class="section" data-aos="fade-up">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-8  text-center">
+              <h2 class="mb-3">Registration</h2>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga, alias distinctio voluptatum magni voluptatibus.</p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-md-6 p-5 form-wrap">
+                <form method="post" id="reservationForm">
+                    {% csrf_token %}
+                    
+                    <!-- Username -->
+                    <div class="row mb-4 justify-content-center">
+                        <div class="form-group col-md-10 text-center">
+                            <label for="name" class="label">Name</label>
+                            <div class="form-field-icon-wrap mx-auto" style="max-width: 300px;">
+                                <span class="icon ion-android-person"></span>
+                                {{ form.username }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mb-4 justify-content-center">
+                        <div class="form-group col-md-10 text-center">
+                            <label for="name" class="label">Email</label>
+                            <div class="form-field-icon-wrap mx-auto" style="max-width: 300px;">
+                                {{ form.email }}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Password -->
+                    <div class="row mb-4 justify-content-center">
+                        <div class="form-group col-md-10 text-center">
+                            <label for="password1" class="label">Password</label>
+                            <div class="form-field-icon-wrap mx-auto" style="max-width: 300px;">
+                                <span class="icon ion-password"></span>
+                                {{ form.password1 }}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Confirm Password -->
+                    <div class="row mb-4 justify-content-center">
+                        <div class="form-group col-md-10 text-center">
+                            <label for="password2" class="label">Confirm Password</label>
+                            <div class="form-field-icon-wrap mx-auto" style="max-width: 300px;">
+                                <span class="icon ion-password"></span>
+                                {{ form.password2 }}
+                            </div>
+                        </div>
+                    </div>
+
+                    &nbsp;
+                    
+                    <!-- Submit Button -->
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary btn-outline-primary btn-block">Register</button>
+                        </div>
+                    </div>
+
+                    &nbsp;
+                    
+                    <!-- Login Link -->
+                    <div class="row justify-content-center">
+                        <div class="col-md-10 text-center">
+                            <p>Already have an account? <a href="{% url 'accounts:login' %}">Login here</a>.</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        </div>
+      </div> <!-- .section -->
+
+{% endblock body %}
